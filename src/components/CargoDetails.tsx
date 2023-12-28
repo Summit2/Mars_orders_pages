@@ -24,7 +24,8 @@ const CargoDetails: React.FC = () => {
     let data = {}
     mock_data.forEach(element => {
 // @ts-ignore
-      if (element.pk === id_cargo) {
+      if (element.pk == id_cargo) {
+
         data = element
       }
     });
