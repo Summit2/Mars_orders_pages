@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { mock_data } from './data.ts';
-
+import './background_style.css'
 interface CargoItem {
   pk: number;
   title: string;
