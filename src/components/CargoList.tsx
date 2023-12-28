@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {mock_data } from './data.ts'
 
