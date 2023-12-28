@@ -100,7 +100,7 @@ const CargoList = () => {
           
           <br />
 
-          <a href={`cargo/${item.pk}/`} className="beautiful-link">
+          <a href={`/cargo/${item.pk}/`} className="beautiful-link">
             <h2>Подробнее...</h2>
           </a>
         </li>
