@@ -17,6 +17,7 @@ const CargoList = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const location = useLocation();
+  //@ts-ignore
   const navigate = useNavigate();
 
   const filterData = (filter: string) => {
@@ -27,7 +28,7 @@ const CargoList = () => {
   const fetchData = (filter: string | null = null) => {
     try {
       const filteredData = filter ? filterData(filter) : mock_data;
-
+//@ts-ignore
       setData(filteredData);
       setLoading(false);
       setError(null);
