@@ -2,13 +2,14 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function NavigationAndSearchBar() {
   const [inputValue, setInputValue] = useState('');
+  // @ts-ignore
   const navigate = useNavigate(); // Get the navigate function from react-router-dom
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
