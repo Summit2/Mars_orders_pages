@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import {mock_data} from './data.ts'
+import './background_style.css'
 
 interface CargoItem {
   pk: number;
@@ -42,6 +43,7 @@ const CargoDetails: React.FC = () => {
 
   return (
     <>
+    <div className='background'>
       {cargoItem.title}
       <div className="current-image">
       <img src={`data:image/jpeg;base64,${cargoItem.image_binary.toString()}`} style={{ height: '300px', width: '400px' }} />
@@ -57,6 +59,7 @@ const CargoDetails: React.FC = () => {
       
       <div>
         Описание: {cargoItem.description}
+      </div>
       </div>
       </div>
     </>
