@@ -43,9 +43,10 @@ const CargoList = () => {
 
     // @ts-ignore
       setData(mock_data);
+      console.log(mock_data)
       setLoading(false);
       setError(null);
-        
+      
       
     
   };
