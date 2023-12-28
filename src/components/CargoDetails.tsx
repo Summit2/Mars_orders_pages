@@ -44,7 +44,7 @@ const CargoDetails: React.FC = () => {
     <>
       {cargoItem.title}
       <div className="current-image">
-      <img src={`data:image/jpeg;base64,${cargoItem.image_binary.toString()}`} style={{ height: '500px', width: '600px' }} />
+      <img src={`data:image/jpeg;base64,${cargoItem.image_binary.toString()}`} style={{ height: '300px', width: '400px' }} />
 
       </div>
       <div className='font'>
