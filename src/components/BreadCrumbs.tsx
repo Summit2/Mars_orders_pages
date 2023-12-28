@@ -7,7 +7,7 @@ const BreadCrumbs: React.FC = () => {
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   const breadcrumbStyle: React.CSSProperties = {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'bisque', // Set the background color to bisque
     padding: '20px',
     borderRadius: '5px',
     margin: '10px 0',

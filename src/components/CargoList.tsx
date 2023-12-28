@@ -55,6 +55,7 @@ const CargoList = () => {
   }
 
   return (
+    // <div className='background'>
     <ul className='card-list'>
       {Array.isArray(data) && data.map((item) => (
         <li key={item.pk} className="card">
@@ -75,6 +76,7 @@ const CargoList = () => {
         </li>
       ))}
     </ul>
+    // </div>
   );
 };
 

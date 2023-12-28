@@ -43,7 +43,7 @@ const CargoDetails: React.FC = () => {
 
   return (
     <>
-    <div className='background'>
+    {/* <div className='background'> */}
       {cargoItem.title}
       <div className="current-image">
       <img src={`data:image/jpeg;base64,${cargoItem.image_binary.toString()}`} style={{ height: '300px', width: '400px' }} />
@@ -61,7 +61,7 @@ const CargoDetails: React.FC = () => {
         Описание: {cargoItem.description}
       </div>
       </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };
