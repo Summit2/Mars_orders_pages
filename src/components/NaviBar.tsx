@@ -21,29 +21,18 @@ function NavigationAndSearchBar() {
     console.log("Submitted value:", inputValue);
   };
 
-  const handleFilter = (filter: string) => {
-    // Update the URL with the selected filter
-    navigate(`/cargo?filter=${filter}`);
-  };
 
   return (
     <Container>
       <Row>
         <Col>
         <Navbar bg="white" expand="lg">
-              <Navbar.Brand as={Link} to="/cargo">Выбор грузов </Navbar.Brand>
+              <Navbar.Brand as={Link} to="/cargo">Грузы </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link as={Link} to="/cargo">Главная</Nav.Link>
-                  <NavDropdown title="Фильтрация" id="basic-nav-dropdown">
-                    {/* <NavDropdown.Item as={Link} to="/cargo/12">Обеденный набор 1</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/cargo/14">Запасная одежда</NavDropdown.Item> */}
-                    <NavDropdown.Item onClick={() => handleFilter('weight')}>По весу</NavDropdown.Item>
-                    <NavDropdown.Item onClick={() => handleFilter('name')}>По названию</NavDropdown.Item>
-                    {/* <NavDropdown.Item onClick={() => handleFilter('weight')}>По весу</NavDropdown.Item> */}
-                    
-                  </NavDropdown>
+                  <Nav.Link as={Link} to="/cargo">Список грузов</Nav.Link>
+                  
                 </Nav>
               </Navbar.Collapse>
             </Navbar>

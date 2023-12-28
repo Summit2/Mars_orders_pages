@@ -1,7 +1,8 @@
 // CargoDetails.tsx
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import {mock_data} from './data.ts'
 
 interface CargoItem {
   pk: number;
@@ -20,17 +21,16 @@ const CargoDetails: React.FC = () => {
   useEffect(() => {
     console.log('Fetching cargo for id:', id_cargo);
 
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8000/cargo/${id_cargo}/`);
-        // console.log('Cargo response:', response.data);
-        setCargoItem(response.data);
-      } catch (error) {
-        // console.error('Error fetching cargo:', error);
+    let data = {}
+    mock_data.forEach(element => {
+// @ts-ignore
+      if (element.pk === id_cargo) {
+        data = element
       }
-    };
-
-    fetchData();
+    });
+    // @ts-ignore
+    setCargoItem(data);
+     
   }, [id_cargo]);
 
   if (!cargoItem) {
