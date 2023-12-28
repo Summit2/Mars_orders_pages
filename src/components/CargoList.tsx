@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MockCargoItem , mock_data } from './data.ts'
+import {mock_data } from './data.ts'
 
 interface CargoItem {
   pk: number;
@@ -20,6 +20,7 @@ const CargoList = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+// @ts-ignore
   const fetchData = async (filter: string | null = null) => {
     try {
       let url = "http://localhost:8000/cargo/";
@@ -35,7 +36,7 @@ const CargoList = () => {
       console.error("Error fetching data:", error);
       setError("An error occurred while fetching data.");
 
-    
+    // @ts-ignore
       setData(mock_data);
       setLoading(false);
       setError(null);
@@ -45,7 +46,7 @@ const CargoList = () => {
       setLoading(false);
     }
   };
-
+// @ts-ignore
   const handleFilter = (filter: string) => {
     // Perform a PUT request to update the filter on the server
     axios.put("http://localhost:8000/cargo/", null, {
@@ -54,6 +55,7 @@ const CargoList = () => {
         "Content-Type": "application/json",
       },
     })
+    // @ts-ignore
       .then((response) => {
         // After the PUT request is successful, trigger the GET request
         fetchData(filter);

@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useState } from 'react';
+// import React, { FC, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { 
-  BrowserRouter as Router,
+  
   Route,
   Routes,
    } from 'react-router-dom'
@@ -14,7 +14,7 @@ import '/css/search_bar.css';
 import '/css/my_style.css';
 import '/css/delete_button.css';
 
-import CargoList from './components/CargoList.tsx';
+// import CargoList from './components/CargoList.tsx';
 import ExactCargo from './components/CargoDetails'
 import BreadCrumbs from './components/BreadCrumbs.tsx'
 import './components/BreadCrumbs.css'
@@ -87,3 +87,4 @@ ReactDOM.render(
   </HashRouter>,
   document.getElementById('root')
 );
+//
