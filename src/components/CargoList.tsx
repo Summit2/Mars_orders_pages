@@ -14,10 +14,15 @@ interface CargoItem {
 }
 
 const CargoList = () => {
+  // @ts-ignore
   const [data, setData] = useState<CargoItem[]>([]);
+  // @ts-ignore
   const [loading, setLoading] = useState(true);
+  // @ts-ignore
   const [error, setError] = useState<string | null>(null);
+  // @ts-ignore
   const location = useLocation();
+  // @ts-ignore
   const navigate = useNavigate();
 
 // @ts-ignore
@@ -42,30 +47,21 @@ const CargoList = () => {
       setError(null);
         
       
-    } finally {
-      setLoading(false);
-    }
+    
   };
 // @ts-ignore
   const handleFilter = (filter: string) => {
     // Perform a PUT request to update the filter on the server
-    axios.put("http://localhost:8000/cargo/", null, {
-      params: { filter },
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    
+    
     // @ts-ignore
-      .then((response) => {
+      
         // After the PUT request is successful, trigger the GET request
-        fetchData(filter);
+        fetchData(mock_data);
         // Update the URL with the selected filter
         navigate(`/cargo?filter=${filter}`);
-      })
-      .catch((error) => {
-        console.error("Error updating filter:", error);
-        // Handle the error, e.g., show a notification to the user
-      });
+      
+      
   };
   
 
