@@ -28,7 +28,6 @@ const CargoList = () => {
     try {
       const filteredData = filter ? filterData(filter) : mock_data;
 
-      // @ts-ignore
       setData(filteredData);
       setLoading(false);
       setError(null);
@@ -37,11 +36,6 @@ const CargoList = () => {
       setError("An error occurred while fetching data.");
       setLoading(false);
     }
-  };
-// @ts-ignore
-  const handleFilter = (filter: string) => {
-    fetchData(filter);
-    navigate(`/cargo?filter=${filter}`);
   };
 
   useEffect(() => {
