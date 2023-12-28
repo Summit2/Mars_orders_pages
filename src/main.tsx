@@ -16,6 +16,7 @@ import '/css/delete_button.css';
 
 // import CargoList from './components/CargoList.tsx';
 import ExactCargo from './components/CargoDetails'
+import CargoList from './components/CargoList.tsx'
 import BreadCrumbs from './components/BreadCrumbs.tsx'
 import './components/BreadCrumbs.css'
 import NavigationAndSearchBar from './components/NaviBar';
@@ -72,7 +73,7 @@ ReactDOM.render(
       <Route path="/cargo/" element={<>
     <NavigationAndSearchBar />
     <BreadCrumbs />
-    <ExactCargo />
+    <CargoList />
     
     </>}/>
       <Route path="/cargo/:id_cargo/" element={
