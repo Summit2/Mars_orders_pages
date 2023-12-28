@@ -20,50 +20,70 @@ import BreadCrumbs from './components/BreadCrumbs.tsx'
 import './components/BreadCrumbs.css'
 import NavigationAndSearchBar from './components/NaviBar';
 
-const router = createBrowserRouter([
-  {
-    path: '/cargo/',
-    element:  <>
-        <NavigationAndSearchBar />
-        <BreadCrumbs />
-        <CargoList />
+// const router = createBrowserRouter([
+//   {
+//     path: '/cargo/',
+//     element:  <>
+//         <NavigationAndSearchBar />
+//         <BreadCrumbs />
+//         <CargoList />
         
 
-      </>
-    // element: <div className = "font"><b>Cписок грузов для отправки на Starship</b></div>
-    // element: <div> {renderFindBar()} </div>
-  },
-  {
-    path: '/cargo/:id_cargo/',
-    element: <>
+//       </>
+//   },
+//   {
+//     path: '/cargo/:id_cargo/',
+//     element: <>
+//     <NavigationAndSearchBar />
+//     <BreadCrumbs />
+//     <ExactCargo />
+    
+//     </>
+
+//   },
+//   {
+//     path: '/orders',
+
+//   },
+// ]);
+
+
+
+// async function renderApp() {
+ 
+//   ReactDOM.render(
+//     <React.StrictMode>
+      
+//       <RouterProvider router={router} />
+ 
+//     </React.StrictMode>,
+//     document.getElementById('root')
+//   );
+// }
+
+// renderApp();
+
+import {HashRouter} from "react-router-dom";
+
+
+ReactDOM.render(
+  <HashRouter>
+    <Routes>
+      <Route path="/cargo/" element={<>
+    <NavigationAndSearchBar />
+    <BreadCrumbs />
+    <ExactCargo />
+    
+    </>}/>
+      <Route path="/cargo/:id_cargo/" element={
+      <>
     <NavigationAndSearchBar />
     <BreadCrumbs />
     <ExactCargo />
     
     </>
-
-    // element: <div className = "font"><b>Cписок грузов для отправки на Starship</b></div>
-    // element: <div> {renderFindBar()} </div>
-  },
-  {
-    path: '/orders',
-    // element: <h1>Это наша страница с чем-то новеньким</h1>,
-  },
-]);
-
-
-
-async function renderApp() {
- 
-  ReactDOM.render(
-    <React.StrictMode>
-      
-      <RouterProvider router={router} />
- 
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}
-
-renderApp();
-
+  }/>
+    </Routes>
+  </HashRouter>,
+  document.getElementById('root')
+);

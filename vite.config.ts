@@ -9,7 +9,7 @@ export default defineConfig({
     //   '/api': 'http://localhost:8080',
     // },
   },
-  base: "/my-app/",
+  base: "/Mars_orders_pages/",
   plugins: [react()],
   
 })
