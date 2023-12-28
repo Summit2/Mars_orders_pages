@@ -29,6 +29,8 @@ const CargoDetails: React.FC = () => {
       }
     });
     // @ts-ignore
+    console.log( data);
+    // @ts-ignore
     setCargoItem(data);
      
   }, [id_cargo]);
@@ -41,7 +43,7 @@ const CargoDetails: React.FC = () => {
     <>
       {cargoItem.title}
       <div className="current-image">
-      <img src={`data:image/jpeg;base64,${cargoItem.image_binary.toString('base64')}`} style={{ height: '300px', width: '400px' }} />
+      <img src={`data:image/jpeg;base64,${cargoItem.image_binary.toString()}`} style={{ height: '300px', width: '400px' }} />
 
       </div>
       <div className='font'>
